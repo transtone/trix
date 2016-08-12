@@ -129,16 +129,17 @@ Trix.registerElement "trix-editor", do ->
       when "change", "attachment-add", "attachment-edit", "attachment-remove"
         @inputElement?.value = Trix.serializeToContentType(this, "text/html")
 
-    if @editorController
-      triggerEvent("trix-#{message}", onElement: this, attributes: data)
+    triggerEvent("trix-#{message}", onElement: this, attributes: data)
 
   # Element lifecycle
 
   createdCallback: ->
+    @config = Trix.deepCopy(Trix.config)
     makeEditable(this)
 
   attachedCallback: ->
     unless @hasAttribute("data-trix-internal")
+      @notify("before-initialize")
       @editorController ?= new Trix.EditorController(editorElement: this, html: @defaultValue = @value)
       @editorController.registerSelectionManager()
       @registerResetListener()
