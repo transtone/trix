@@ -8,3 +8,4 @@
 #= require trix/core/helpers/custom_elements
 #= require trix/core/helpers/selection
 #= require trix/core/helpers/deep_copy
+#= require trix/core/helpers/config

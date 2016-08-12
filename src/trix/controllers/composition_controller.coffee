@@ -7,6 +7,7 @@
 
 class Trix.CompositionController extends Trix.BasicObject
   constructor: (@element, @composition) ->
+    {@config} = @element
     @documentView = new Trix.DocumentView @composition.document, {@element}
 
     handleEvent "focus", onElement: @element, withCallback: @didFocus
@@ -30,7 +31,7 @@ class Trix.CompositionController extends Trix.BasicObject
     attachment = @findAttachmentForElement(target)
     @delegate?.compositionControllerDidSelectAttachment?(attachment)
 
-  render: ->
+  render: Trix.withConfig ->
     unless @revision is @composition.revision
       @documentView.setDocument(@composition.document)
       @documentView.render()
