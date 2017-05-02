@@ -1,5 +1,12 @@
 @import "./media-queries";
-@import "./icons";
+@font-face {
+  font-family: 'icomoon';
+  src: url('./fonts/icomoon.eot?i6u9t9');
+  src: url('./fonts/icomoon.eot?i6u9t9#iefix') format('embedded-opentype'), url('./fonts/icomoon.ttf?i6u9t9') format('truetype'), url('./fonts/icomoon.woff?i6u9t9') format('woff'), url('./fonts/icomoon.svg?i6u9t9#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 $font-size-normal: 0.75em;
 $opacity-normal: 0.6;
 $opacity-disabled: 0.125;
@@ -45,81 +52,82 @@ trix-toolbar {
       outline: none;
       border: none;
       background: transparent;
+      &:hover {
+        &::before {
+          color: #F75B50;
+          opacity: 1;
+        }
+      }
       &:not(:disabled) {
         cursor: pointer;
       }
       &.active {
         color: #F75B50;
         background: #FDE5E4;
+        border-radius: 2px;
       }
       &.icon {
-        width: 2.6em;
-        height: 1.6em;
+        width: 1.8em;
+        height: 1.8em;
         max-width: calc(0.8em + 4vw);
-        text-indent: -9999px;
+        font-size: 1.2em;
+        font-family: 'icomoon' !important;
+        margin-right: 5px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         @include phone {
           height: 2em;
           max-width: calc(0.8em + 3.5vw);
         }
         &::before {
-          display: inline-block;
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
           opacity: $opacity-normal;
-          content: "";
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
           @include phone {
             right: 6%;
             left: 6%;
           }
         }
         &.bold::before {
-          background-image: $icon-bold;
+          content: "\ea62";
         }
         &.italic::before {
-          background-image: $icon-italic;
+          content: "\ea64";
         }
         &.link::before {
-          background-image: $icon-link;
+          content: "\e9cb";
         }
         &.image::before {
-          background-image: $icon-image;
+          content: "\e90d";
         }
         &.strike::before {
-          background-image: $icon-strike;
+          content: "\ea65";
         }
         &.quote::before {
-          background-image: $icon-quote;
+          content: "\e977";
         }
         &.heading-1::before {
-          background-image: $icon-heading-1;
+          content: "\ea61";
         }
         &.code::before {
-          background-image: $icon-code;
+          content: "\ea80";
         }
         &.bullets::before {
-          background-image: $icon-bullets;
+          content: "\e9bb";
         }
         &.numbers::before {
-          background-image: $icon-numbers;
+          content: "\e9b9";
         }
         &.undo::before {
-          background-image: $icon-undo;
+          content: "\e967";
         }
         &.redo::before {
-          background-image: $icon-redo;
+          content: "\e968";
         }
         &.nesting-level {
           &.decrease::before {
-            background-image: $icon-nesting-level-decrease;
+            content: "\ea7c";
           }
           &.increase::before {
-            background-image: $icon-nesting-level-increase;
+            content: "\ea7b";
           }
         }
         &.active::before {
