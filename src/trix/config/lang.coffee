@@ -7,7 +7,7 @@ Trix.config.lang =
   captionPlaceholder: "请在此输入标题…"
   captionPrompt: "添加标题…"
   code: "代码"
-  heading1: "H1"
+  heading1: "标题"
   indent: "缩进"
   italic: "斜体"
   link: "超链接"
