@@ -20,13 +20,6 @@ trix-toolbar {
     border-top-color: #ccc;
     border-bottom-color: #888;
     border-radius: 3px;
-    input[type=file] {
-      height: 0px;
-      width: 0px;
-      position: absolute;
-      left: 0px;
-      top: 0px;
-    }
     button,
     input[type=button] {
       position: relative;
@@ -82,6 +75,9 @@ trix-toolbar {
         }
         &.link::before {
           background-image: $icon-link;
+        }
+        &.image::before {
+          background-image: $icon-image;
         }
         &.strike::before {
           background-image: $icon-strike;

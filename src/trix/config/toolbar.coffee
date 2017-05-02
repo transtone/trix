@@ -9,7 +9,8 @@ Trix.config.toolbar =
         <button type="button" class="icon italic" data-trix-attribute="italic" data-trix-key="i" title="#{lang.italic}">#{lang.italic}</button>
         <button type="button" class="icon strike" data-trix-attribute="strike" title="#{lang.strike}">#{lang.strike}</button>
         <button type="button" class="icon link" data-trix-attribute="href" data-trix-action="link" data-trix-key="k" title="#{lang.link}">#{lang.link}</button>
-        <button type="button" class="icon image" data-trix-action="image" data-trix-key="u" title="#{lang.image}">#{lang.image}</button>
+        <button type="button" class="icon image" data-trix-action="image" data-trix-key="u" title="#{lang.image}">#{lang.image}
+        </button>
         <input type="file" multiple>
       </span>
 
