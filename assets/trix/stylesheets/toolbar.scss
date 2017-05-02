@@ -5,21 +5,36 @@ $opacity-normal: 0.6;
 $opacity-disabled: 0.125;
 $opacity-active: 1;
 trix-toolbar {
+  border: 1px solid #bbb;
+  padding: 10px 0;
+  border-radius: 3px 3px 0 0;
   * {
     box-sizing: border-box;
   }
   .button_row {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    display: table;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
   }
   .button_group {
-    display: flex;
-    margin-bottom: 10px;
-    border: 1px solid #bbb;
-    border-top-color: #ccc;
-    border-bottom-color: #888;
-    border-radius: 3px;
+    position: relative;
+    display: table-cell;
+    padding: 0 10px;
+    &:not(:last-child) {
+      border-right: 1px solid #ccc;
+    }
+    input[type=file] {
+      position: absolute;
+      font-size: inherit;
+      opacity: 0;
+      cursor: pointer;
+      height: 1.6em;
+      width: 2.6em;
+      right: 0px;
+      top: 0px;
+    }
     button,
     input[type=button] {
       position: relative;
@@ -29,17 +44,13 @@ trix-toolbar {
       margin: 0;
       outline: none;
       border: none;
-      border-bottom: 1px solid #ddd;
-      border-radius: 0;
       background: transparent;
-      &:not(:first-child) {
-        border-left: 1px solid #ccc;
-      }
       &:not(:disabled) {
         cursor: pointer;
       }
       &.active {
-        background: #cbeefa;
+        color: #F75B50;
+        background: #FDE5E4;
       }
       &.icon {
         width: 2.6em;

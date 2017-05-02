@@ -16,7 +16,7 @@ Trix.config.lang =
   quote: "引用"
   redo: "反撤销"
   remove: "移除"
-  strike: "删除"
+  strike: "删除线"
   undo: "撤销"
   unlink: "撤销链接"
   urlPlaceholder: "输入网址…"

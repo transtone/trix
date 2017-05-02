@@ -1,40 +1,33 @@
 @import "./icons";
-
 trix-editor {
   [data-trix-mutable=true] {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
-    ::-moz-selection {
+     ::-moz-selection {
       background: none;
     }
-
     img {
       box-shadow: 0 0 0 2px highlight;
     }
-
     &.attachment.attachment-file {
       box-shadow: 0 0 0 2px highlight;
       border-color: transparent;
     }
   }
-
   .attachment {
     &:hover {
       cursor: default;
     }
-
     &.attachment-preview {
+      position: relative;
       .caption:hover {
         cursor: text;
       }
     }
-
     button.remove {
       cursor: pointer;
-
       &.icon {
         text-indent: -9999px;
         display: block;
@@ -52,7 +45,6 @@ trix-editor {
         background-color: #fff;
         border: 2px solid highlight;
         box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
-
         &::before {
           display: inline-block;
           position: absolute;
@@ -68,16 +60,13 @@ trix-editor {
           background-size: contain;
         }
       }
-
       &:hover {
         border-color: #333;
-
         &::before {
           opacity: 1;
         }
       }
     }
-
     .caption {
       &.caption-editing {
         textarea {
@@ -98,7 +87,6 @@ trix-editor {
         }
       }
     }
-
     progress {
       position: absolute;
       z-index: 1;
