@@ -35,7 +35,6 @@ class Trix.AttachmentEditorController extends Trix.BasicObject
   addRemoveButton: undoable ->
     removeButton = makeElement
       tagName: "button"
-      textContent: lang.remove
       className: classNames.attachment.removeButton
       attributes: type: "button", title: lang.remove
       data: trixMutable: true

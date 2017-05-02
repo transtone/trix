@@ -1,4 +1,3 @@
-@import "./icons";
 trix-editor {
   [data-trix-mutable=true] {
     -webkit-user-select: none;
@@ -29,35 +28,26 @@ trix-editor {
     button.remove {
       cursor: pointer;
       &.icon {
-        text-indent: -9999px;
+        font-family: 'icomoon' !important;
         display: block;
         position: absolute;
         z-index: 1;
         padding: 0;
         margin: 0;
         top: -1.1em;
-        left: calc(50% - 0.8em);
+        right: 0.8em;
         width: 1.8em;
         height: 1.8em;
         line-height: 1.8em;
         border-radius: 50%;
-        text-indent: -9999px;
         background-color: #fff;
         border: 2px solid highlight;
         box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
         &::before {
           display: inline-block;
           position: absolute;
-          top: 0.1em;
-          right: 0.1em;
-          bottom: 0.1em;
-          left: 0.1em;
           opacity: 0.75;
-          content: "";
-          background-image: $icon-remove;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
+          content: "\ea0f";
         }
       }
       &:hover {

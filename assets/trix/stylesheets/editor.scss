@@ -4,7 +4,22 @@ trix-editor {
   border-bottom-right-radius: 3px;
   border-top: none;
   margin: 0;
+  line-height: 1.43;
   padding: 0.4em 0.6em;
   min-height: 5em;
   outline: none;
+  em,
+  i {
+    font-style: italic;
+  }
+  ul,
+  ol {
+    padding-left: 1em;
+  }
+  ul {
+    list-style-type: disc;
+  }
+  ol {
+    list-style-type: decimal;
+  }
 }

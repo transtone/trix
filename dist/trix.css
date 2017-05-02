@@ -9,9 +9,20 @@ trix-editor {
   border-bottom-right-radius: 3px;
   border-top: none;
   margin: 0;
+  line-height: 1.43;
   padding: 0.4em 0.6em;
   min-height: 5em;
   outline: none; }
+  trix-editor em,
+  trix-editor i {
+    font-style: italic; }
+  trix-editor ul,
+  trix-editor ol {
+    padding-left: 1em; }
+  trix-editor ul {
+    list-style-type: disc; }
+  trix-editor ol {
+    list-style-type: decimal; }
 @font-face {
   font-family: 'icomoon';
   src: url("./fonts/icomoon.eot?i6u9t9");
@@ -20,7 +31,7 @@ trix-editor {
   font-style: normal; }
 trix-toolbar {
   border: 1px solid #bbb;
-  padding: 10px 0;
+  padding: 5px 0;
   border-radius: 3px 3px 0 0; }
   trix-toolbar * {
     box-sizing: border-box; }
@@ -72,7 +83,7 @@ trix-toolbar {
         width: 1.8em;
         height: 1.8em;
         max-width: calc(0.8em + 4vw);
-        font-size: 1.2em;
+        font-size: 1.1em;
         font-family: 'icomoon' !important;
         margin-right: 5px;
         -webkit-font-smoothing: antialiased;
@@ -222,35 +233,26 @@ trix-editor .attachment.attachment-preview {
 trix-editor .attachment button.remove {
   cursor: pointer; }
   trix-editor .attachment button.remove.icon {
-    text-indent: -9999px;
+    font-family: 'icomoon' !important;
     display: block;
     position: absolute;
     z-index: 1;
     padding: 0;
     margin: 0;
     top: -1.1em;
-    left: calc(50% - 0.8em);
+    right: 0.8em;
     width: 1.8em;
     height: 1.8em;
     line-height: 1.8em;
     border-radius: 50%;
-    text-indent: -9999px;
     background-color: #fff;
     border: 2px solid highlight;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25); }
     trix-editor .attachment button.remove.icon::before {
       display: inline-block;
       position: absolute;
-      top: 0.1em;
-      right: 0.1em;
-      bottom: 0.1em;
-      left: 0.1em;
       opacity: 0.75;
-      content: "";
-      background-image: url(data:image/svg+xml,%3Csvg%20height%3D%2224%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M19%206.4L17.6%205%2012%2010.6%206.4%205%205%206.4l5.6%205.6L5%2017.6%206.4%2019l5.6-5.6%205.6%205.6%201.4-1.4-5.6-5.6z%22%2F%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain; }
+      content: "\ea0f"; }
   trix-editor .attachment button.remove:hover {
     border-color: #333; }
     trix-editor .attachment button.remove:hover::before {
