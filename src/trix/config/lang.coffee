@@ -1,6 +1,6 @@
 Trix.config.lang =
   bold: "粗体"
-  image: "图片上传"
+  image: "插入图片"
   bullets: "无序列表"
   byte:  "Byte"
   bytes: "Bytes"

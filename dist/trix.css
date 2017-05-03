@@ -272,7 +272,8 @@ trix-editor .attachment {
     position: absolute;
     z-index: 1;
     height: 20px;
-    bottom: 0px;
+    left: 0;
+    bottom: -15px;
     width: 100%;
     opacity: 0.9; }
 @charset "UTF-8";
